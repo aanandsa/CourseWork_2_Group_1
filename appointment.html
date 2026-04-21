@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="appointment-style.css">
+
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <img src="clinic.png" alt="Clinic Logo" height="75px" width="75px">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="our-services.html">Services</a></li>
+                <li><a href="appointment.html">Book Appointment</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="Appointment-form">
+        <div class="title">Book An Appointment</div>
+        <form action="#">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Full Name</span>
+                    <input type="text" placeholder="Enter your full Name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Age</span>
+                    <input type="text" placeholder="Enter your age" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Date of Birth</span>
+                    <input type="date" placeholder="Enter your date of birth" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="text" placeholder="Enter your email" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Phone Number</span>
+                    <input type="text" placeholder="Enter your Phone Number" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Appointment Date</span>
+                    <input type="datetime-local" placeholder="Enter your appointment date" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Services</span>
+                    <div class="services-wrapper">
+                        <select name="services" id="services" required>
+                            <option value="">Select a service</option>
+                            <option value="women-health">Women's Health</option>
+                            <option value="children-care">Children's Care</option>
+                            <option value="mental-health">Mental Health</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="gender-details">
+                    <input type="radio" name="gender" id="dot-1">
+                    <input type="radio" name="gender" id="dot-2">
+                    <input type="radio" name="gender" id="dot-3">
+                    <span class="gender-title">Gender</span>
+                    <div class="category">      
+                        <label for="dot-1">
+                            <span class="dot one"></span>
+                            <span class="gender">Male</span>
+                        </label>
+                        <label for="dot-2">
+                            <span class="dot two"></span>
+                            <span class="gender">Female</span>
+                        </label>
+                        <label for="dot-3">
+                            <span class="dot three"></span>
+                            <span class="gender">Prefer not to say</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Book Now">
+                </div>
+                
+            </div>
+        </form>
+    </div>
+    <div id="notification">
+        <div class="notification-title">Appointment Booked</div>
+        <div id="notification-message"></div>
+        <span class="notification-close">&times;</span>
+    </div>
+</body>
+</html>
